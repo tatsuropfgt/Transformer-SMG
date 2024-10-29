@@ -1,0 +1,7 @@
+x-transformers
+numpy
+packaging
+hydra-core
+wandb
+tqdm
+muspy

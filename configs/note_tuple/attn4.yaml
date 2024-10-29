@@ -1,0 +1,13 @@
+model:
+    pos_enc: "learnable" # None, "sinusoidal", "learnable"
+    rel_idx: False
+    rel_time: False
+    rel_pitch: False
+    linear: False
+    hadamard: False
+    attn_only: True
+data:
+    batch_size: 32
+train:
+    accumulation_steps: 1
+music_rep: "NoteTuple"

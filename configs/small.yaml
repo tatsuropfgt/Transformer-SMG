@@ -1,0 +1,27 @@
+wandb:
+    project: "symbolic_music_gen"
+    use: True
+data:
+    data_root: "/n/work3/inaba/dataset/POP909"
+    data_src: "muspy_data"
+    train_file: "train.txt"
+    val_file: "valid.txt"
+    test_file: "test.txt"
+    transpose: True
+    num_workers: 16
+model:
+    dim: 256
+    ff_inner_dim: 1024
+    depth: 4
+    heads: 8
+    max_note_len: 1024
+    dropout: 0.2
+train:
+    max_steps: 50000
+    val_steps: 500
+    lr: 8e-5
+    warmup_steps: 5000
+    decay_end_steps: 50000
+    decay_end_multiplier: 0.1
+    early_stopping_patience: 20
+save_dir: "/n/work3/inaba/models/trained/symbolic_music_gen"

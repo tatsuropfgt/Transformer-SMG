@@ -1,0 +1,13 @@
+model:
+    pos_enc: "learnable" # None, "sinusoidal", "learnable"
+    rel_idx: True
+    rel_time: True
+    rel_pitch: True
+    linear: True
+    hadamard: True
+    alpha: 0.1
+data:
+    batch_size: 8
+train:
+    accumulation_steps: 4
+music_rep: "REMI+"
